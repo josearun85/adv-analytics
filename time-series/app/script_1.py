@@ -2,8 +2,8 @@ import requests
 import json
 import pandas as pd
 import time
-# Where is my prediction server
-url = "http://127.0.0.1:5000/predict"
+## Where is my prediction server
+#url = "http://127.0.0.1:5000/predict"
 
 city_of_interest = "bangalore"
 
@@ -33,7 +33,7 @@ while True:
 		df = pd.DataFrame(live_weather['consolidated_weather'])
 	print(df.head())
 	df.to_csv("live_weather.csv",index=False)
-	time.sleep(15)
+	time.sleep(60)
 	
 	
 exit()
